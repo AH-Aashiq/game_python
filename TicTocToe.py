@@ -1,5 +1,23 @@
 import random
+from colorama import Fore
 
+print(Fore.GREEN + ''' 
+   Alachi Presents
+--------------''' + Fore.CYAN + '''  
+      =================================================
+=        ==========        =============        =============
+====  ================  ===================  ================
+====  ================  ===================  ================
+====  ====  ==   =====  =====   ===   =====  =====   ===   ==
+====  =======  =  ====  ====     =  =  ====  ====     =  =  =
+====  ====  =  =======  ====  =  =  =======  ====  =  =     =
+====  ====  =  =======  ====  =  =  =======  ====  =  =  ====
+====  ====  =  =  ====  ====  =  =  =  ====  ====  =  =  =  =
+====  ====  ==   =====  =====   ===   =====  =====   ===   ==
+=============================================================
+                                                                 ''' + Fore.WHITE + '''Customize by Alachi
+        ''')
+print("")
 #Step 1: Write a function that can print out a board.Set up your board as a list, where each index 1-9 conroosponds with number pad,so you get a 3 by 3 board representation.
 def display_board(board):
     
@@ -26,7 +44,7 @@ def player_input():
 
      marker = ' '
      while not (marker == 'O' or marker == 'X'):
-          marker = input('Player 1: Do you want to be x or o?').upper()
+          marker = input(Fore.RED+'Player 1: Do you want to be x or o?').upper()
 
           if marker == 'X':
                return ('X','O')
@@ -86,14 +104,14 @@ def player_choice(board):
      position = ' '
 
      while position not in '1 2 3 4 5 6 7 8 9'.split() or not space_check(board, int(position)):
-          position = input('Choose your next position: (1-9) ')
+          position = input(Fore.RED+'Choose your next position: (1-9) ')
      return int(position)
 
 #Step 9: Write a fucntion that ask the palyer if they want to palye again and return a boolean . True if they do want to play again.
 
 def replay():
 
-     return input('Do your want to play again?Enter Yes or NO').lower().startswith('y')
+     return input(Fore.WHITE+'Do your want to play again?Enter Yes or NO').lower().startswith('y')
 
 #Step 10: Here comes the hard part! Use while loops and the function you're made to run the game!
 
@@ -117,7 +135,7 @@ while True:
 
                if win_check(theBoard,player1_marker):
                     display_board(theBoard)
-                    print('Congratulations! Player 1 has won the game!!')
+                    print(Fore.YELLOW+'Congratulations! Player 1 has won the game!!')
 
                     game_on = False
                
