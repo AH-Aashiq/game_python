@@ -1,3 +1,3 @@
-Simple Game Building using Python.
-1.Number gussing
-2.snake game 
+Simple Game Building using Python.<br>
+1.Number gussing <br>
+2.snake game <br>
